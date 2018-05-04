@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 import appReducer from './reducers/app';
 
 import Homepage from './pages/homepage';
+import Checkout from "./pages/checkout";
 
 const history = createHistory();
 
@@ -26,7 +27,8 @@ ReactDOM.render((
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <Switch>
-          <Route path="/" component={Homepage} />
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </ConnectedRouter>
     </Provider>
