@@ -1,6 +1,4 @@
 const MongoClient = require('mongodb').MongoClient;
-const ObjectId = require('mongodb').ObjectId;
-
 const flightsCollection = 'flights';
 
 class Connector {

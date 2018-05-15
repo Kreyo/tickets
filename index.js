@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-
 /**
  * MongoDB config
  */
@@ -10,16 +9,15 @@ const databaseHost = 'localhost';
 const databasePort = '27017';
 const databaseName = 'tickets';
 
-const mongo = require('./db/mongo');
+const mongo = require('./db/flights');
 let connection = new mongo(databaseHost, databasePort, databaseName);
 
 app.use(express.static(__dirname + '/dist/'));
 
 app.get('/flight-list', function(req, res) {
   connection.fetchFlights((result) => {
-    res.send(result);
+    res.json(result);
   });
-
 });
 
 app.use(function(req, res) {
