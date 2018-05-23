@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory';

@@ -4,3 +4,10 @@ export const selectFlight = selectedFlight => {
     selectedFlight
   }
 };
+
+export const selectSeat = seat => {
+  return {
+    type: 'SELECT_FLIGHT',
+    seat
+  }
+};

@@ -11,7 +11,7 @@ class Card extends React.Component {
   }
 
   onButtonClick() {
-    this.props.selectFlight(this.props.flight)
+    this.props.selectFlight(this.props.flight);
     this.props.goToPlacesSelection();
   }
 

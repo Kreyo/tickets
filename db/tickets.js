@@ -34,8 +34,7 @@ class Connector {
             'flight': data.flight,
             'seat': data.seat,
           }).then(result => {
-
-        callback(result);
+              callback(result);
       });
     });
   }
